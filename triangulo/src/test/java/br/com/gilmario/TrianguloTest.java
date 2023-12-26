@@ -14,82 +14,132 @@ public class TrianguloTest {
     }
 
     @Test
-    public void validaTrianguloAMenorQueBMaisC() throws TrianguloException {
-        assertTrue(t.validaTriangulo(8, 5, 5));
+    public void validaCMenorAB() throws TrianguloException {
+        assertTrue(t.validaTriangulo(2, 2, 2));
     }
 
     @Test
-    public void validaTrianguloBMenorQueAMaisC() throws TrianguloException {
-        assertTrue(t.validaTriangulo(8, 5, 5));
-    }
-
-    @Test
-    public void validaTrianguloAMaiorQueBMaisC() throws TrianguloException {
+    public void validaCMaiorAB() throws TrianguloException {
         Exception exception = assertThrows(TrianguloException.class, () ->
-                t.validaTriangulo(20, 5, 6));
+                t.validaTriangulo(2,2,5));
         assertEquals("Os valores informados não formam um triangulo!", exception.getMessage());
     }
 
     @Test
-    public void validaTrianguloBMaiorQueAMaisC() throws TrianguloException {
-
-        Exception exception = assertThrows(TrianguloException.class, () ->
-                t.validaTriangulo(5, 20, 6));
-        assertEquals("Os valores informados não formam um triangulo!", exception.getMessage());
-
+    public void validaBMenorAC() throws TrianguloException {
+        assertTrue(t.validaTriangulo(3, 4, 5));
     }
 
     @Test
-    public void validaTrianguloCMaiorQueAMaisB() throws TrianguloException {
+    public void validaBMaiorAC() throws TrianguloException {
         Exception exception = assertThrows(TrianguloException.class, () ->
-                t.validaTriangulo(5, 5, 20));
+                t.validaTriangulo(2,4,1));
         assertEquals("Os valores informados não formam um triangulo!", exception.getMessage());
     }
 
-
-
     @Test
-    public void validaTrianguloCMenorQueAMaisB() throws TrianguloException {
-        assertTrue(t.validaTriangulo(8, 5, 5));
+    public void validaAMenorBC() throws TrianguloException {
+        assertTrue(t.validaTriangulo(5, 5, 6));
     }
 
     @Test
-    public void tipoEquilatero() {
-        assertEquals(" O triangulo é equilatero ", t.obtemTipoTriangulo(5, 5, 5));
+    public void validaAMaiorBC() throws TrianguloException {
+        Exception exception = assertThrows(TrianguloException.class, () ->
+                t.validaTriangulo(10,2,5));
+        assertEquals("Os valores informados não formam um triangulo!", exception.getMessage());
     }
 
     @Test
-    public void naoTipoEquilatero() {
-        assertNotEquals(" O triangulo é equilatero ", t.obtemTipoTriangulo(5, 5, 4));
-        assertNotEquals(" O triangulo é equilatero ", t.obtemTipoTriangulo(5, 4, 5));
-        assertNotEquals(" O triangulo é equilatero ", t.obtemTipoTriangulo(4, 5, 5));
-        assertNotEquals(" O triangulo é equilatero ", t.obtemTipoTriangulo(4, 2, 5));
+    public void validaLado0() throws TrianguloException {
+        Exception exception = assertThrows(TrianguloException.class, () ->
+                t.validaTriangulo(0, 1, 2));
+        assertEquals("Os valores informados não formam um triangulo!", exception.getMessage());
     }
 
     @Test
-    public void tipoIsosceles() {
-        assertEquals(" O triangulo é isoceles ", t.obtemTipoTriangulo(5, 5, 10));
-        assertEquals(" O triangulo é isoceles ", t.obtemTipoTriangulo(5, 10, 5));
-        assertEquals(" O triangulo é isoceles ", t.obtemTipoTriangulo(10, 5, 5));
+    public void validaLadoNegativo() throws TrianguloException {
+        Exception exception = assertThrows(TrianguloException.class, () ->
+                t.validaTriangulo(-1, 1, 2));
+        assertEquals("Os valores informados não formam um triangulo!", exception.getMessage());
     }
 
     @Test
-    public void naoTipoIsosceles() {
-        assertNotEquals(" O triangulo é isoceles ", t.obtemTipoTriangulo(5, 5, 5));
-        assertNotEquals(" O triangulo é isoceles ", t.obtemTipoTriangulo(3, 5, 4));
+    public void validaAIqualBC() throws TrianguloException {
+        Exception exception = assertThrows(TrianguloException.class, () ->
+                t.validaTriangulo(3, 1, 2));
+        assertEquals("Os valores informados não formam um triangulo!", exception.getMessage());
     }
 
     @Test
-    public void tipoEscaleno() {
-        assertEquals(" O triangulo é escaleno ", t.obtemTipoTriangulo(5, 8, 4));
+    public void valida3Lados0() throws TrianguloException {
+        Exception exception = assertThrows(TrianguloException.class, () ->
+                t.validaTriangulo(0, 0, 0));
+        assertEquals("Os valores informados não formam um triangulo!", exception.getMessage());
+    }
+
+    //Teste não chega a compilar devido ao tamanho do número C
+    /*
+    @Test
+    public void validaMaxint() throws TrianguloException {
+        Exception exception = assertThrows(TrianguloException.class, () ->
+                t.validaTriangulo(1431655765, 1431655765, 2147483648));
+        assertEquals("Os valores informados não formam um triangulo!", exception.getMessage());
+    }
+    */
+
+    @Test
+    public void obtemTipoEquilatero() {
+        assertEquals(" O triangulo é equilatero ", t.obtemTipoTriangulo(2,2 , 2));
     }
 
     @Test
-    public void naoTipoEscaleno() {
-        assertNotEquals(" O triangulo é escaleno ", t.obtemTipoTriangulo(5, 5, 5));
-        assertNotEquals(" O triangulo é escaleno ", t.obtemTipoTriangulo(5, 5, 4));
-        assertNotEquals(" O triangulo é escaleno ", t.obtemTipoTriangulo(5, 4, 5));
-        assertNotEquals(" O triangulo é escaleno ", t.obtemTipoTriangulo(4, 5, 5));
+    public void obtemTipoIsosceles1() {
+        assertEquals(" O triangulo é isoceles ", t.obtemTipoTriangulo(3, 3, 4));
+    }
+
+    @Test
+    public void obtemTipoIsosceles2() {
+        assertEquals(" O triangulo é isoceles ", t.obtemTipoTriangulo(3, 4, 3));
+    }
+
+    @Test
+    public void obtemTipoIsosceles3() {
+        assertEquals(" O triangulo é isoceles ", t.obtemTipoTriangulo(4, 3, 3));
+    }
+
+    @Test
+    public void obtemTipoNaoIsosceles1() {
+        assertNotEquals(" O triangulo é isoceles ", t.obtemTipoTriangulo(3, 3, 3));
+    }
+
+    @Test
+    public void obtemTipoNaoIsosceles2() {
+        assertNotEquals(" O triangulo é isoceles ", t.obtemTipoTriangulo(2, 3, 4));
+    }
+
+    @Test
+    public void obtemTipoEscaleno1() {
+        assertEquals(" O triangulo é escaleno ", t.obtemTipoTriangulo(3, 4, 5));
+    }
+
+    @Test
+    public void obtemTipoEscaleno2() {
+        assertEquals(" O triangulo é escaleno ", t.obtemTipoTriangulo(5, 3, 4));
+    }
+
+    @Test
+    public void obtemTipoEscaleno3() {
+        assertEquals(" O triangulo é escaleno ", t.obtemTipoTriangulo(4, 5, 3));
+    }
+
+    @Test
+    public void obtemTipoNaoEscaleno1() {
+        assertNotEquals(" O triangulo é escaleno ", t.obtemTipoTriangulo(3, 3, 3));
+    }
+
+    @Test
+    public void obtemTipoNaoEscaleno2() {
+        assertNotEquals(" O triangulo é escaleno ", t.obtemTipoTriangulo(3, 3, 4));
     }
 
 }
