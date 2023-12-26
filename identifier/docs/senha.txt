@@ -1,0 +1,4 @@
+Uma senha válida, para o cenário que vamos trabalhar possui as seguintes características:
+1 -> seja T o tamanho da Senha S, tal 1 <= T <= 6;
+2 -> deve obrigatoriamente começar com uma letra;
+3 -> deve composta de apenas letras e números;
