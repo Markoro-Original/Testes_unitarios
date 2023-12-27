@@ -6,8 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="d1582cff-5316-4818-8a4e-591c5fbb31dd" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/identifier/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/identifier/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/triangulo/src/test/java/br/com/gilmario/TrianguloTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/triangulo/src/test/java/br/com/gilmario/TrianguloTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/identifier/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/identifier/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/identifier/src/test/java/testes/IdentifierTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/identifier/src/test/java/testes/IdentifierTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/identifier/target/classes/fontes/Identifier.class" beforeDir="false" afterPath="$PROJECT_DIR$/identifier/target/classes/fontes/Identifier.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/identifier/target/test-classes/testes/IdentifierTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/identifier/target/test-classes/testes/IdentifierTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,7 +54,7 @@
       <workItem from="1703610165945" duration="1961000" />
       <workItem from="1703615307526" duration="89000" />
       <workItem from="1703616168937" duration="16000" />
-      <workItem from="1703705021195" duration="740000" />
+      <workItem from="1703705021195" duration="3233000" />
     </task>
     <servers />
   </component>
