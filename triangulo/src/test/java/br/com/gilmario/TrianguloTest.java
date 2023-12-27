@@ -77,16 +77,6 @@ public class TrianguloTest {
         assertEquals("Os valores informados não formam um triangulo!", exception.getMessage());
     }
 
-    //Teste não chega a compilar devido ao tamanho do número C
-    /*
-    @Test
-    public void validaMaxint() throws TrianguloException {
-        Exception exception = assertThrows(TrianguloException.class, () ->
-                t.validaTriangulo(1431655765, 1431655765, 2147483648));
-        assertEquals("Os valores informados não formam um triangulo!", exception.getMessage());
-    }
-    */
-
     @Test
     public void obtemTipoEquilatero() {
         assertEquals(" O triangulo é equilatero ", t.obtemTipoTriangulo(2,2 , 2));
@@ -142,4 +132,43 @@ public class TrianguloTest {
         assertNotEquals(" O triangulo é escaleno ", t.obtemTipoTriangulo(3, 3, 4));
     }
 
+    //Teste não chega a compilar devido ao tamanho do número C
+    /*
+    @Test
+    public void validaMaxint() throws TrianguloException {
+        Exception exception = assertThrows(TrianguloException.class, () ->
+                t.validaTriangulo(1431655765, 1431655765, 2147483648));
+        assertEquals("Os valores informados não formam um triangulo!", exception.getMessage());
+    }
+    */
+
+    //Teste não chega a compilar devido ao parâmetro não integer
+    /*
+    @Test
+    public void validaNaoInteger() throws TrianguloException {
+        Exception exception = assertThrows(TrianguloException.class, () ->
+                t.validaTriangulo(a, 2, 3));
+        assertEquals("Os valores informados não formam um triangulo!", exception.getMessage());
+    }
+    */
+
+    //Teste não chega a compilar devido a falta de parâmetros suficiente
+    /*
+    @Test
+    public void valida2Parametros() throws TrianguloException {
+        Exception exception = assertThrows(TrianguloException.class, () ->
+                t.validaTriangulo(1, 2));
+        assertEquals("Os valores informados não formam um triangulo!", exception.getMessage());
+    }
+    */
+
+    //Teste não chega a compilar devido ao excesso de parâmetros
+    /*
+    @Test
+    public void valida4Parametros() throws TrianguloException {
+        Exception exception = assertThrows(TrianguloException.class, () ->
+                t.validaTriangulo(1, 2, 3, 4));
+        assertEquals("Os valores informados não formam um triangulo!", exception.getMessage());
+    }
+    */
 }

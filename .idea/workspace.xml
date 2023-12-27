@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d1582cff-5316-4818-8a4e-591c5fbb31dd" name="Changes" comment="" />
+    <list default="true" id="d1582cff-5316-4818-8a4e-591c5fbb31dd" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/identifier/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/identifier/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/triangulo/src/test/java/br/com/gilmario/TrianguloTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/triangulo/src/test/java/br/com/gilmario/TrianguloTest.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -26,7 +30,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/Marco/Documents/Faculdade/projetos_teste",
+    "last_opened_file_path": "C:/Users/Marco/Documents/Faculdade/projetos_teste/triangulo",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -48,10 +52,22 @@
       <workItem from="1703610165945" duration="1961000" />
       <workItem from="1703615307526" duration="89000" />
       <workItem from="1703616168937" duration="16000" />
+      <workItem from="1703705021195" duration="740000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
