@@ -1,15 +1,14 @@
 package br.com.gilmarioarantes.validacpf.model;
 
-import org.testng.annotations.BeforeTest;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import static org.testng.Assert.assertFalse;
-import static org.testng.Assert.assertTrue;
+import static org.testng.Assert.*;
 
 public class ValidaCPFTeste {
     private ValidaCPF validador;
 
-    @BeforeTest
+    @BeforeMethod
     public void setUp() {
         validador = new ValidaCPF();
     }
@@ -47,13 +46,13 @@ public class ValidaCPFTeste {
     @Test
     public void testCPFComMenosDeTresDigitos() {
         assertFalse(validador.isCPF("12"));
-        assertFalse(validador.isCPF(""));
         assertFalse(validador.isCPF("9"));
+        assertFalse(validador.isCPF(""));
     }
 
     @Test
     public void testCPFNulo() {
-        assertFalse(validador.isCPF(null));
+        assertThrows(NullPointerException.class, () -> validador.isCPF(null));
     }
 
 }
