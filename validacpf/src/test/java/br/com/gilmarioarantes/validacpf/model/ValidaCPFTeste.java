@@ -44,4 +44,16 @@ public class ValidaCPFTeste {
         assertFalse(validador.isCPF("11111111111"));
     }
 
+    @Test
+    public void testCPFComMenosDeTresDigitos() {
+        assertFalse(validador.isCPF("12"));
+        assertFalse(validador.isCPF(""));
+        assertFalse(validador.isCPF("9"));
+    }
+
+    @Test
+    public void testCPFNulo() {
+        assertFalse(validador.isCPF(null));
+    }
+
 }
